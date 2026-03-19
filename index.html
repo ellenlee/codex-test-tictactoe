@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unbeatable TicTacToe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>人類打不贏的井字棋</h1>
+      <p class="subtitle">
+        你永遠是 <strong>X</strong>，AI 永遠是 <strong>O</strong>。這個 AI 使用完整搜尋，
+        只要規則不變，它理論上不會輸。
+      </p>
+
+      <section class="status" aria-live="polite">
+        <div id="status-text">你的回合，先手出招吧。</div>
+        <div class="badge" id="score-text">你 0 : 0 AI（平手 0）</div>
+      </section>
+
+      <section class="board" id="board" aria-label="TicTacToe board"></section>
+
+      <div class="controls">
+        <button class="control" id="restart-round">重新開始這局</button>
+        <button class="control secondary" id="restart-all">清空戰績</button>
+      </div>
+
+      <ul class="tips">
+        <li>AI 使用 minimax 演算法，會計算所有可能結局後再落子。</li>
+        <li>最佳結果只有平手；如果你失誤，它會立刻把你收掉。</li>
+      </ul>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
